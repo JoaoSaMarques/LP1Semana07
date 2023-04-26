@@ -19,6 +19,9 @@ namespace FillSpheres
             sphere2.Throw();
             sphere3.Throw();
             sphere3.Throw();
+
+            //Pop the second sphere
+            sphere2.Pop();
         }
     }
 }
