@@ -14,16 +14,25 @@ namespace FillSpheres
         //Define color
         public Color(int red, int green, int blue, int alpha)
         {
+            //Red is red
             Red = red;
+            //Green is green
             Green = green;
+            //Blue is blue
             Blue = blue;
+            //Alpha is alpha
             Alpha = alpha;
         }
 
-        
+        //Color
         public Color(int red, int green, int blue) : this(red, green, blue, 255)
         {
+        }
 
+        //Grey
+        public int GetGrey()
+        {
+            return (Red + Green + Blue) / 3;
         }
 
     }
