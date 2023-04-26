@@ -19,6 +19,13 @@ namespace FillSpheres
             this.timesThrown = 0;
         }
 
+        //Pop method
+        public void Pop()
+        {
+            //Turns sphere radius to 0
+            this.radius = 0;
+        }
+
 
 
     }
