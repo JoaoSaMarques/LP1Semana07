@@ -24,13 +24,13 @@ namespace FillSpheres
             sphere2.Pop();
 
             //Result for sphere 1
-            Console.WriteLine($"Sphere 1: C{sphere1.Color},R{sphere1.Radius},");
+            Console.WriteLine($"Sphere 1: C{sphere1.color},R{sphere1.radius},");
             Console.WriteLine($"Tt{sphere1.GetTimesThrown()}");
             //Result for sphere 2
-            Console.WriteLine($"Sphere 2: C{sphere2.Color},R{sphere2.Radius},");
+            Console.WriteLine($"Sphere 2: C{sphere2.color},R{sphere2.radius},");
             Console.WriteLine($"Tt{sphere2.GetTimesThrown()}");
             //Result for sphere 3
-            Console.WriteLine($"Sphere 3: C{sphere3.Color},R{sphere3.Radius},");
+            Console.WriteLine($"Sphere 3: C{sphere3.color},R{sphere3.radius},");
             Console.WriteLine($"Tt{sphere3.GetTimesThrown()}");
 
 
