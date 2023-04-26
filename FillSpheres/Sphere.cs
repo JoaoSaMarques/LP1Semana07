@@ -26,6 +26,17 @@ namespace FillSpheres
             this.radius = 0;
         }
 
+        //Throw method
+        public void Throw()
+        {
+            //If Sphere hasn't been popped
+            if (this.radius > 0)
+            {
+                //increase number of times it has been thrown
+                this.timesThrown++;
+            }
+        }
+
 
 
     }
