@@ -4,9 +4,9 @@ namespace FillSpheres
 {
     public class Sphere
     {
-        private Color color { get; set; }
-        private double radius{ get; set; }
-        private int numOfTimesThrown;
+        public Color color { get; set; }
+        public double radius{ get; set; }
+        public int numOfTimesThrown;
 
         //Define the sphere
         public Sphere(Color color, double radius)

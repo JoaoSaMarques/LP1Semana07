@@ -24,11 +24,14 @@ namespace FillSpheres
             sphere2.Pop();
 
             //Result for sphere 1
-            Console.WriteLine($"Sphere 1: C({sphere1.color.R}, {sphere1.color.G}, {sphere1.color.B}), R{sphere1.radius}, Tt{sphere1.GetTimesThrown()}");
+            Console.WriteLine($"Sphere 1: C{sphere1.color},R{sphere1.radius},");
+            Console.WriteLine($"Tt{sphere1.GetTimesThrown()}");
             //Result for sphere 2
-            Console.WriteLine($"Sphere 2: C({sphere2.color.R}, {sphere2.color.G}, {sphere2.color.B}), R{sphere2.radius}, Tt{sphere2.GetTimesThrown()}");
+            Console.WriteLine($"Sphere 2: C{sphere2.color},R{sphere2.radius},");
+            Console.WriteLine($"Tt{sphere2.GetTimesThrown()}");
             //Result for sphere 3
-            Console.WriteLine($"Sphere 3: C({sphere3.color.R}, {sphere3.color.G}, {sphere3.color.B}), R{sphere3.radius}, Tt{sphere3.GetTimesThrown()}");
+            Console.WriteLine($"Sphere 3: C{sphere3.color},R{sphere3.radius},");
+            Console.WriteLine($"Tt{sphere3.GetTimesThrown()}");
 
 
         }
