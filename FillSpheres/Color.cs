@@ -10,7 +10,6 @@ namespace FillSpheres
         public int Blue { get; set; }
         public int Alpha { get; set; }
 
-
         //Define color
         public Color(int red, int green, int blue, int alpha)
         {
@@ -35,5 +34,25 @@ namespace FillSpheres
             return (Red + Green + Blue) / 3;
         }
 
+        //Get the name of the color
+        public string GetName()
+        {
+            if (Red == 255 && Green == 0 && Blue == 0) // Red
+            {
+                return "Red";
+            }
+            else if (Red == 0 && Green == 255 && Blue == 0) // Green
+            {
+                return "Green";
+            }
+            else if (Red == 0 && Green == 0 && Blue == 255) // Blue
+            {
+                return "Blue";
+            }
+            else // Custom color
+            {
+                return "Custom";
+            }
+        }
     }
 }
