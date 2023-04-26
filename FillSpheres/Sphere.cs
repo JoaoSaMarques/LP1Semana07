@@ -12,9 +12,9 @@ namespace FillSpheres
         public Sphere(Color color, double radius)
         {
             //Color
-            color = color;
+            this.color = color;
             //Total radius
-            radius = radius;
+            this.radius = radius;
             //Times it has been thrown
             this.numOfTimesThrown = 0;
         }
@@ -23,14 +23,14 @@ namespace FillSpheres
         public void Pop()
         {
             //Turns sphere radius to 0
-            Radius = 0;
+            radius = 0;
         }
 
         //Throw method
         public void Throw()
         {
             //If Sphere hasn't been popped
-            if (Radius > 0)
+            if (radius > 0)
             {
                 //increase number of times it has been thrown
                 this.numOfTimesThrown++;
