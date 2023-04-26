@@ -4,17 +4,17 @@ namespace FillSpheres
 {
     public class Sphere
     {
-        private Color color;
-        private double radius;
+        private Color color { get; set; }
+        private double radius{ get; set; }
         private int numOfTimesThrown;
 
         //Define the sphere
         public Sphere(Color color, double radius)
         {
             //Color
-            this.color = color;
+            color = color;
             //Total radius
-            this.radius = radius;
+            radius = radius;
             //Times it has been thrown
             this.numOfTimesThrown = 0;
         }
@@ -23,14 +23,14 @@ namespace FillSpheres
         public void Pop()
         {
             //Turns sphere radius to 0
-            this.radius = 0;
+            Radius = 0;
         }
 
         //Throw method
         public void Throw()
         {
             //If Sphere hasn't been popped
-            if (this.radius > 0)
+            if (Radius > 0)
             {
                 //increase number of times it has been thrown
                 this.numOfTimesThrown++;
@@ -42,8 +42,5 @@ namespace FillSpheres
         {
             return this.numOfTimesThrown;
         }
-
-
-
     }
 }
