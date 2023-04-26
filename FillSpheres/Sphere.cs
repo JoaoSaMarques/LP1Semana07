@@ -16,7 +16,7 @@ namespace FillSpheres
             //Total radius
             this.radius = radius;
             //Times it has been thrown
-            this.timesThrown = 0;
+            this.numOfTimesThrown = 0;
         }
 
         //Pop method
@@ -33,8 +33,14 @@ namespace FillSpheres
             if (this.radius > 0)
             {
                 //increase number of times it has been thrown
-                this.timesThrown++;
+                this.numOfTimesThrown++;
             }
+        }
+
+        //get the number of times the ball has been thrown
+        public int GetTimesThrown()
+        {
+            return this.numOfTimesThrown;
         }
 
 
