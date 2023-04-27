@@ -1,46 +1,41 @@
-﻿using System;
-
-namespace FillSpheres
+﻿public class Sphere
 {
-    public class Sphere
+    //Color + Radius + Times Thrown
+    private Color _color;
+    private float _radius;
+    private int _timesThrown;
+
+    //Color
+    public Color Color 
     {
-        public Color color { get; set; }
-        public double radius{ get; set; }
-        public int numOfTimesThrown;
+        get { return _color; }
+        set { _color = value; }
+    }
 
-        //Define the sphere
-        public Sphere(Color color, double radius)
-        {
-            //Color
-            this.color = color;
-            //Total radius
-            this.radius = radius;
-            //Times it has been thrown
-            this.numOfTimesThrown = 0;
-        }
+    //Radius
+    public float Radius 
+    {
+        get { return _radius; }
+        set { _radius = value; }
+    }
 
-        //Pop method
-        public void Pop()
-        {
-            //Turns sphere radius to 0
-            radius = 0;
-        }
+    //Times Thrown
+    public int TimesThrown 
+    {
+        get { return _timesThrown; }
+    }
 
-        //Throw method
-        public void Throw()
-        {
-            //If Sphere hasn't been popped
-            if (radius > 0)
-            {
-                //increase number of times it has been thrown
-                this.numOfTimesThrown++;
-            }
-        }
+    //Define Sphere
+    public Sphere(Color color, float radius)
+    {
+        Color = color;
+        Radius = radius;
+        _timesThrown = 0;
+    }
 
-        //get the number of times the ball has been thrown
-        public int GetTimesThrown()
-        {
-            return this.numOfTimesThrown;
-        }
+    //Times thrown
+    public void Throw()
+    {
+        _timesThrown++;
     }
 }
