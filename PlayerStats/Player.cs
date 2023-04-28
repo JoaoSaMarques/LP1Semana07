@@ -17,11 +17,14 @@ namespace PlayerStats
         //High Score
         public float HighScore
         {
+            //gets and returns the HighScore
             get { return highScore; }
             set
             {
+                //If the value is higher than the set HighScore
                 if (value > highScore)
                 {
+                    //then convert HighScore to that value
                     highScore = value;
                 }
             }
@@ -30,7 +33,7 @@ namespace PlayerStats
         //Get Name
         public string Name
         {
-        get { return name; }
+            get { return name; }
         }
 
         //Get WinRate
