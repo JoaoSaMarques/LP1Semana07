@@ -39,7 +39,8 @@ namespace PlayerStats
         //Get WinRate
         public float WinRate
         {
-        get { return playedGames == 0 ? 0 : (float)wonGames / playedGames; }
+            //WinRate depending on Won games divided by played games in %
+            get { return playedGames == 0 ? 0 : (float)wonGames / playedGames; }
         }
 
         //Constructor to create player stats
