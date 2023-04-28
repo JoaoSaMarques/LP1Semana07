@@ -12,7 +12,7 @@ namespace PlayerStats
         //Games won
         public int wonGames;
         //String name
-        public readonly string name;
+        public readonly string Name;
 
         //High Score
         public float HighScore
@@ -48,6 +48,17 @@ namespace PlayerStats
             wonGames = 0;
         }
 
-
+        //To make PlayGame work in program.cs
+        public void PlayGame(bool win)
+        {
+            //PlayedGames goes up by 1.
+            playedGames++;
+            //If you win:
+            if (win)
+            {
+                //Won games goes up by 1.
+                wonGames++;
+            }
+        }
     }
 }
