@@ -6,11 +6,11 @@ namespace PlayerStats
     {
         //stats
         //HighScore
-        public float highScore { get; set; }
+        public float highScore;
         //Amount of games played
-        public int playedGames { get; set; }
+        public int playedGames;
         //Games won
-        public int wonGames { get; set; }
+        public int wonGames;
         //String name
         public readonly string name;
 
@@ -20,7 +20,30 @@ namespace PlayerStats
             highScore = HighScore
         }
 
-        
+        //High Score
+        public float HighScore
+        {
+            get { return highScore; }
+            set
+            {
+                if (value > highScore)
+                {
+                    highScore = value;
+                }
+            }
+        }
+
+        //Get Name
+        public string Name
+        {
+        get { return name; }
+        }
+
+        //Get WinRate
+        public float WinRate
+        {
+        get { return playedGames == 0 ? 0 : (float)wonGames / playedGames; }
+        }
 
 
 
