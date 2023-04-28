@@ -12,7 +12,7 @@ namespace PlayerStats
         //Games won
         public int wonGames;
         //String name
-        public readonly string Name;
+        public readonly string name;
 
         //High Score
         public float HighScore
