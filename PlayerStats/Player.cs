@@ -14,12 +14,6 @@ namespace PlayerStats
         //String name
         public readonly string name;
 
-        //Player stats
-        public Player(float HighScore)
-        {
-            highScore = HighScore
-        }
-
         //High Score
         public float HighScore
         {
@@ -45,7 +39,14 @@ namespace PlayerStats
         get { return playedGames == 0 ? 0 : (float)wonGames / playedGames; }
         }
 
-
+        //Constructor to create player stats
+        public Player(string name)
+        {
+            this.name = name;
+            highScore = 0;
+            playedGames = 0;
+            wonGames = 0;
+        }
 
 
     }
