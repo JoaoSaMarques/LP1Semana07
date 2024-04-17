@@ -20,14 +20,7 @@ namespace GameUnits
         public void Attack(Unit unitToAttack)
         {
             XP++;
-            if (unitToAttack is MilitaryUnit militaryUnit)
-            {
-                militaryUnit.Health--;
-            }
-            else
-            {
-                unitToAttack.Health = unitToAttack.Health -1;
-            }
+            unitToAttack.Health--;
         }
     }
 }
