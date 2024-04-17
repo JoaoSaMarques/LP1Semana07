@@ -2,34 +2,25 @@ using System;
 
 namespace GameUnits
 {
-    public class MilitaryUnit : Unit 
+    public class MilitaryUnit : Unit
     {
-        public int BaseHealth { get; private set; }
-        public int XP { get; private set; }
         public int AttackPower { get; private set; }
+        public int XP { get; private set; }
 
-        public MilitaryUnit(int baseHealth, int attackPower) : base(baseHealth + XP)
+        public MilitaryUnit(int attackPower)
         {
-            BaseHealth = baseHealth;
             AttackPower = attackPower;
             XP = 0;
-            Cost = AttackPower + XP;
         }
 
-        public override int Health 
-        { 
-            get { return BaseHealth + XP; }
-        }
+        public override float Health { get { return base.Health + XP; } }
 
-        public override float Cost 
-        { 
-            get { return AttackPower + XP; }
-        }
+        public override float Cost { get { return AttackPower + XP; } }
 
-        public void Attack(Unit target) 
+        public void Attack(Unit unitToAttack)
         {
-            target.Health -= AttackPower;
             XP++;
+            unitToAttack.Health--;
         }
     }
 }
