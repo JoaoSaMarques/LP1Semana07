@@ -2,26 +2,22 @@
 
 namespace GameUnits
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
             SettlerUnit settler = new SettlerUnit();
-            MilitaryUnit military = new MilitaryUnit(100, 10);
+            MilitaryUnit military = new MilitaryUnit(5);
 
+            Console.WriteLine("Settler Unit:");
             settler.Move();
-            Console.WriteLine($"SettlerUnit Health: {settler.Health}");
-            Console.WriteLine($"SettlerUnit Cost: {settler.Cost}");
+            Console.WriteLine($"Health: {settler.Health}");
+            Console.WriteLine($"Cost: {settler.Cost}");
 
+            Console.WriteLine("Military Unit:");
             military.Move();
-            Console.WriteLine($"MilitaryUnit Health: {military.Health}");
-            Console.WriteLine($"MilitaryUnit Cost: {military.Cost}");
-
-            military.Attack(settler);
-
-            Console.WriteLine($"SettlerUnit Health after attack: {settler.Health}");
-            Console.WriteLine($"MilitaryUnit Health after attack: {military.Health}");
-            Console.WriteLine($"MilitaryUnit XP after attack: {military.XP}");
+            Console.WriteLine($"Health: {military.Health}");
+            Console.WriteLine($"Cost: {military.Cost}");
         }
     }
 }
