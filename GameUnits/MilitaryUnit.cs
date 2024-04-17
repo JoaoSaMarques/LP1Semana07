@@ -17,10 +17,10 @@ namespace GameUnits
 
         public override float Cost { get { return AttackPower + XP; } }
 
-        public void Attack(Unit unitToAttack)
+        public void Attack()
         {
             XP++;
-            unitToAttack.Health--;
+            DecreaseHealth(1);
         }
 
         public override string ToString()
