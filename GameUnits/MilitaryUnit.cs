@@ -26,7 +26,7 @@ namespace GameUnits
             }
             else
             {
-                unitToAttack.Health--;
+                unitToAttack.Health = unitToAttack.Health -1;
             }
         }
     }
