@@ -1,17 +1,20 @@
 using System;
 
-public abstract class Unit 
+namespace GameUnits
 {
-    public virtual int Health { get; protected set; }
-    public abstract float Cost { get; }
-
-    public Unit(int health) 
+    public abstract class Unit 
     {
-        Health = health;
-    }
+        public virtual int Health { get; protected set; }
+        public abstract float Cost { get; }
 
-    public void Move() 
-    {
-        Console.WriteLine("Unit moved 1 space.");
+        public Unit(int health) 
+        {
+            Health = health;
+        }
+
+        public virtual void Move() 
+        {
+            Console.WriteLine("Unit moved 1 space.");
+        }
     }
 }
