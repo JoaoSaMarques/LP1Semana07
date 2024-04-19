@@ -13,7 +13,7 @@ namespace GameUnits
 
         public override string ToString()
         {
-            return base.ToString() + " " + XP;
+            return base.ToString() + " XP=" + XP;
         }
     }
 }

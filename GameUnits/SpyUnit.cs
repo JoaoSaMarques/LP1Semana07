@@ -6,15 +6,10 @@ namespace GameUnits
     {
         public SpyUnit() : base(8, 2)
         {
-            Cost = 12.5;
+            Cost = 12.5f;
         }
 
-        public double Cost { get; protected set; }
-
-        public override string ToString()
-        {
-            return base.ToString() + " Cost: " + Cost;
-        }
+        public override float Cost { get; set; }
 
         public void GetSecretInfo(Unit unit)
         {

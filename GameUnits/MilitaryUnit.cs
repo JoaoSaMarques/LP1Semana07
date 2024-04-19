@@ -23,7 +23,7 @@ namespace GameUnits
 
         public override string ToString()
         {
-            return $"{base.ToString()} AP={AttackPower} XP={XP}";
+            return $"{base.ToString()} AP={AttackPower}";
         }
     }
 }
