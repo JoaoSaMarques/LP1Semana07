@@ -5,10 +5,10 @@ namespace GameUnits
     public abstract class Unit
     {
         public int Movement { get; protected set; }
-        public virtual float Health { get; set; }
+        public virtual int Health { get; set; }
         public virtual float Cost { get; set; }
 
-        public Unit(int health, int cost)
+        public Unit(int health, float cost)
         {
             Health = health;
             Cost = cost;
@@ -19,7 +19,7 @@ namespace GameUnits
             Console.WriteLine($"Unit moved {Movement} spaces.");
         }
 
-        public void DecreaseHealth(float amount)
+        public void DecreaseHealth(int amount)
         {
             Health -= amount;
         }

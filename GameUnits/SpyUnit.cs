@@ -7,6 +7,7 @@ namespace GameUnits
         public SpyUnit() : base(8, 2)
         {
             Cost = 12.5f;
+            Health = 2;
         }
 
         public override float Cost { get; set; }
@@ -18,7 +19,7 @@ namespace GameUnits
                 XP += 3;
             }
             
-            if (unit is MilitaryUnit)
+            else if (unit is MilitaryUnit)
             {
                 XP += 2;
             }

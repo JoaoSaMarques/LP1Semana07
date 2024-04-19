@@ -7,10 +7,10 @@ namespace GameUnits
         public SettlerUnit() : base(2, 5)
         {
             Movement = 1;
-            Health = 2;
+            Health = 3;
         }
 
-        public override float Health
+        public override int Health
         {
             get { return base.Health; }
             set { base.Health = value; }
