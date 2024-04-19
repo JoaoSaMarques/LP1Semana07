@@ -4,12 +4,22 @@ namespace GameUnits
 {
     public class SettlerUnit : Unit
     {
-        public SettlerUnit()
+        public SettlerUnit() : base(2, 5)
         {
             Movement = 1;
             Health = 2;
         }
 
-        public override float Cost { get; } = 5;
+        public override float Health
+        {
+            get { return base.Health; }
+            set { base.Health = value; }
+        }
+
+        public override float Cost
+        {
+            get { return base.Cost; }
+            set { base.Cost = value; }
+        }
     }
 }
