@@ -26,8 +26,17 @@ namespace ColorSpheres
             redSphere.Pop();
 
             // Print the state of the spheres
-            Console.WriteLine($"Red Sphere - Radius: {redSphere.GetRadius()}, Times Thrown: {redSphere.GetTimesThrown()}, Color: ({redSphere.GetColor().Red}, {redSphere.GetColor().Green}, {redSphere.GetColor().Blue})");
-            Console.WriteLine($"Green Sphere - Radius: {greenSphere.GetRadius()}, Times Thrown: {greenSphere.GetTimesThrown()}, Color: ({greenSphere.GetColor().Red}, {greenSphere.GetColor().Green}, {greenSphere.GetColor().Blue})");
+            Console.WriteLine($"R Sphere - Radius: {redSphere.GetRadius()}, "+
+                   $"Times Thrown: {redSphere.GetTimesThrown()}, " +
+                   $"Color: ({redSphere.GetColor().Red}, " +
+                   $"{redSphere.GetColor().Green}, " +
+                   $"{redSphere.GetColor().Blue})");
+
+            Console.WriteLine($"G Sphere - Radius: {greenSphere.GetRadius()}, "+
+                   $"Times Thrown: {greenSphere.GetTimesThrown()}, " +
+                   $"Color: ({greenSphere.GetColor().Red}, " +
+                   $"{greenSphere.GetColor().Green}, " +
+                   $"{greenSphere.GetColor().Blue})");
         }
     }
 }
