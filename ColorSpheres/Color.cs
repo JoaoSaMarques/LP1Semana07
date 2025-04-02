@@ -28,6 +28,12 @@ namespace ColorSpheres
         public int Blue => blue;
         public int Alpha => alpha;
 
+        // Method to get grey value
+        public int GetGrey()
+        {
+            return (red + green + blue) / 3;
+        }
+
         // Helper method to clamp values between 0 and 255
         private int Clamp(int value)
         {
