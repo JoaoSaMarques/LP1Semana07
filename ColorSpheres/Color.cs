@@ -18,6 +18,10 @@ namespace ColorSpheres
             this.alpha = Clamp(alpha);
         }
 
-
+        // Helper method to clamp values between 0 and 255
+        private int Clamp(int value)
+        {
+            return Math.Max(0, Math.Min(255, value));
+        }
     }
 }
