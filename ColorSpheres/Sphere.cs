@@ -6,7 +6,7 @@ namespace ColorSpheres
     {
         private readonly Color color;
         private double radius;
-        private readonly int timesThrown;
+        private int timesThrown;
 
         // Constructor
         public Sphere(Color color, double radius)

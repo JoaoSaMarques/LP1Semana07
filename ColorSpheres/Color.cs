@@ -4,10 +4,10 @@ namespace ColorSpheres
 {
     public class Color
     {
-        private int red;
-        private int green;
-        private int blue;
-        private int alpha;
+        private readonly int red;
+        private readonly int green;
+        private readonly int blue;        
+        private readonly int alpha;
 
         // Constructor with all parameters
         public Color(int red, int green, int blue, int alpha)
