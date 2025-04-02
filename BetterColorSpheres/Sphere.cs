@@ -4,7 +4,7 @@ namespace BetterColorSpheres
 {
     public class Sphere
     {
-        public readonly Color Color { get; }
+        public Color Color { get; }
         public double Radius { get; private set; }
         public int TimesThrown { get; private set; }
 
