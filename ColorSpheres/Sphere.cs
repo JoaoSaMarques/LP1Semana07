@@ -30,5 +30,11 @@ namespace ColorSpheres
                 timesThrown++;
             }
         }
+
+        // Method to get the number of times thrown
+        public int GetTimesThrown()
+        {
+            return timesThrown;
+        }
     }
 }
