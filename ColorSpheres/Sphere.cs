@@ -36,5 +36,11 @@ namespace ColorSpheres
         {
             return timesThrown;
         }
+
+        // Method to get the color of the sphere
+        public Color GetColor()
+        {
+            return color;
+        }
     }
 }
