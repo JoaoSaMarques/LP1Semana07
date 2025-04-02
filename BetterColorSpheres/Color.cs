@@ -1,5 +1,4 @@
-﻿// Color.cs
-using System;
+﻿using System;
 
 namespace BetterColorSpheres
 {
