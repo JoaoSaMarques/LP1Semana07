@@ -15,5 +15,11 @@ namespace ColorSpheres
             this.radius = radius;
             this.timesThrown = 0;
         }
+
+        // Method to pop the sphere
+        public void Pop()
+        {
+            radius = 0;
+        }
     }
 }
