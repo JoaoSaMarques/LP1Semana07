@@ -2,11 +2,10 @@
 
 namespace ColorSpheres
 {
-    public class Program
+    public class Sphere
     {
-        private static void Main(string[] args)
-        {
-            Console.WriteLine("Hello LP1!");
-        }
+        private Color color;
+        private double radius;
+        private int timesThrown;
     }
 }
