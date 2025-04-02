@@ -42,5 +42,11 @@ namespace ColorSpheres
         {
             return color;
         }
+
+        // Method to get the radius of the sphere
+        public double GetRadius()
+        {
+            return radius;
+        }
     }
 }
