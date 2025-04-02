@@ -21,5 +21,14 @@ namespace ColorSpheres
         {
             radius = 0;
         }
+
+        // Method to throw the sphere
+        public void Throw()
+        {
+            if (radius > 0)
+            {
+                timesThrown++;
+            }
+        }
     }
 }
