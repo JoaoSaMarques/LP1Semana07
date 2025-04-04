@@ -1,39 +1,27 @@
-﻿using System.Text.RegularExpressions;
-
-namespace MyRPG
+﻿namespace MyRPG
 {
     public class Player
     {
-        private string name;
         private int xp;
         private float health;
         
-        readonly int level;
+        public int Level => 1 + xp / 1000;
 
         readonly float MaxHealth;
 
         private int damage;
 
 
-        readonly string Name { get { return name; } }
+        readonly string Name { get; }
         public int Level { get; }
         public float Health 
         { 
-            get 
-            { 
-                return health; 
-            } 
+            get => health;
             set
             {
                 health = value;
-                if (health <= 0)
-                {
-                    health = 0;
-                }
-                if (health >= MaxHealth)
-                {
-                    health = MaxHealth;
-                }
+                if (health < 0) health = 0;
+                if (health > MaxHealth) health = MaxHealth;
             }
         }
 
@@ -46,9 +34,7 @@ namespace MyRPG
         {
             Name = name;
             xp = 0;
-            health = MaxHealth;
-            MaxHealth = 100 + (Level -1)*20;
-            level = 1 + xp / 1000;
+            Health = MaxHealth;
         }
 
         public void TakeDamage(float damage)
