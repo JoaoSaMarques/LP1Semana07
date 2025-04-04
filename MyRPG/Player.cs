@@ -1,4 +1,6 @@
-﻿namespace MyRPG
+﻿using System.Text.RegularExpressions;
+
+namespace MyRPG
 {
     public class Player
     {
@@ -9,6 +11,8 @@
         readonly int level;
 
         readonly float MaxHealth;
+
+        private int damage;
 
 
         readonly string Name { get { return name; } }
@@ -33,6 +37,8 @@
             }
         }
 
+        public int Damage { get { return damage; } }
+
         public int XP { get { return xp; } }
 
         // Constructor
@@ -45,9 +51,9 @@
             level = 1 + xp / 1000;
         }
 
-        public int GetLevel()
+        public void TakeDamage()
         {
-            return level;
+            Value = health - damage;
         }
     }
 }
