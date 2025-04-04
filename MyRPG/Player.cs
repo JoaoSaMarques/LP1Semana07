@@ -2,6 +2,7 @@
 {
     public class Player
     {
+        // Variáveis de Instância
         private int xp;
         private float health;
 
@@ -34,6 +35,7 @@
             }
         }
 
+        // Constructor
         public Player(string name)
         {
             Name = name;
@@ -41,6 +43,7 @@
             Health = MaxHealth;
         }
 
+        
         public void TakeDamage(float damage)
         {
             Health -= damage;
