@@ -39,5 +39,15 @@
                 return (float)_wonGames / _playedGames;
             }
         }
+
+        public void PlayGame(bool win)
+        {
+            _playedGames++;  
+
+            if (win)
+            {
+                _wonGames++;  
+            }
+        }
     }
 }
