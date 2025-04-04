@@ -8,6 +8,7 @@
 
         public string Name { get; }
 
+        // Constructor
         public Player(string name)
         {
             Name = name;
@@ -48,6 +49,14 @@
             {
                 _wonGames++;  
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Player: {Name}, HighScore: {_highScore}, " +
+                   $"PlayedGames: {_playedGames}, " +
+                   $"WonGames: {_wonGames}, " +
+                   $"WinRate: {WinRate:P2}";
         }
     }
 }
