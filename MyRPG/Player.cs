@@ -8,6 +8,8 @@
         
         readonly int level;
 
+        readonly float MaxHealth;
+
 
         readonly string Name { get { return name; } }
         public int Level { get; }
@@ -24,6 +26,10 @@
                 {
                     health = 0;
                 }
+                if (health >= MaxHealth)
+                {
+                    health = MaxHealth;
+                }
             }
         }
 
@@ -35,6 +41,7 @@
             Name = name;
             xp = 0;
             health = MaxHealth;
+            MaxHealth = 100 + (Level -1)*20;
             level = 1 + xp / 1000;
         }
 
