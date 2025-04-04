@@ -17,5 +17,19 @@
                 }
             }
         }
+
+        public string Name { get; }
+
+        public float WinRate
+        {
+            get
+            {
+                if (_playedGames == 0)
+                {
+                    return 0;
+                }
+                return (float)_wonGames / _playedGames;
+            }
+        }
     }
 }
