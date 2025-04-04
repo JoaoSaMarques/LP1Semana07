@@ -6,7 +6,7 @@
         private int xp;
         private float health;
 
-        public string Name { get; }
+        public readonly string Name;
 
         public int XP 
         { 
