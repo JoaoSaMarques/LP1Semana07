@@ -6,6 +6,16 @@
         private int _playedGames;
         private int _wonGames;
 
+        public string Name { get; }
+
+        public Player(string name)
+        {
+            Name = name;
+            _highScore = 0f;
+            _playedGames = 0;
+            _wonGames = 0;
+        }
+
         public float HighScore
         {
             get => _highScore;
@@ -17,8 +27,6 @@
                 }
             }
         }
-
-        public string Name { get; }
 
         public float WinRate
         {
