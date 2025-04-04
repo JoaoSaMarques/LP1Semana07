@@ -51,9 +51,10 @@ namespace MyRPG
             level = 1 + xp / 1000;
         }
 
-        public void TakeDamage()
+        public void TakeDamage(float damage)
         {
-            Value = health - damage;
+            health -= damage;
+
         }
     }
 }
