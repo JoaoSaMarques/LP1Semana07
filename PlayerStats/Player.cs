@@ -8,6 +8,14 @@
 
         public float HighScore
         {
+            get => _highScore;
+            set
+            {
+                if (value > _highScore)
+                {
+                    _highScore = value;
+                }
+            }
         }
     }
 }
