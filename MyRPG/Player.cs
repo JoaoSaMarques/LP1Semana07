@@ -4,16 +4,25 @@
     {
         private int xp;
         private float health;
-        
+
+        public string Name { get; }
+
+        public int XP 
+        { 
+            get => xp;
+            set
+            {
+                if (value > xp)
+                {
+                    xp = value;
+                }
+            }
+        }
+
         public int Level => 1 + xp / 1000;
 
-        readonly float MaxHealth;
+        public float MaxHealth => 100 + (Level - 1) * 20;
 
-        private int damage;
-
-
-        readonly string Name { get; }
-        public int Level { get; }
         public float Health 
         { 
             get => health;
@@ -25,11 +34,6 @@
             }
         }
 
-        public int Damage { get { return damage; } }
-
-        public int XP { get { return xp; } }
-
-        // Constructor
         public Player(string name)
         {
             Name = name;
@@ -39,8 +43,8 @@
 
         public void TakeDamage(float damage)
         {
-            health -= damage;
-
+            Health -= damage;
+            XP += (int)damage / 20;
         }
     }
 }
